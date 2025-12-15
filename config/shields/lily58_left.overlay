@@ -1,21 +1,25 @@
+/* OLED секция */
 &i2c1 {
     status = "okay";
-    sda-pin = <26>;    // Укажите номера пинов SDA...
-    scl-pin = <27>;    // ...и SCL, соответствующие вашей плате!
-    clock-frequency = <I2C_BITRATE_FAST>;
-    // Для nRF52840 чаще SDA=26, SCL=27, но ПРОВЕРЬТЕ в своей схеме!!
-    // Если другие — замените здесь!
-    /* example: sda-pin = <20>; scl-pin = <21>; */
+    sda-pin = <26>;    // ← заменить на ваш SDA pin для OLED!
+    scl-pin = <27>;    // ← заменить на ваш SCL pin для OLED!
+
     oled@3c {
         compatible = "solomon,ssd1306fb";
         reg = <0x3c>;
         width = <128>;
         height = <32>;
-        segment-offset = <0>;
-        page-offset = <0>;
-        display-rotation = "180"; // обычно 180, если верх ногами — уберите или исправьте
+        display-rotation = "180";       // 180 если дисплей “вверх ногами”, иначе 0
         label = "OLED_DISPLAY";
-        spi-max-frequency = <10000000>;
-        i2c-speed = <400000>;
     };
+};
+
+/* RGB подсветка */
+&ws2812 {
+    compatible = "worldsemi,ws2812-spi";
+    label = "WS2812";
+    spi-max-frequency = <8000000>;
+    data-gpios = <&gpio0 30 0>;         // ← заменить на ваш пин Din RGB светодиодов!
+    chain-length = <35>;                // ← количество светиков на одной половине
+    status = "okay";
 };

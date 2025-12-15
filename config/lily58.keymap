@@ -31,6 +31,25 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
+  russian_layer {
+// ----------------------------------------------------------------------------------------------------
+// |  Ё   |  1  |  2  |  3  |  4  |  5  |           |  6  |  7  |  8  |  9  |  0  |  -  |
+// |   Й  |  Ц  |  У  |  К  |  Е  |  Н  |           |  Г  |  Ш  |  Щ  |  З  |  Х  |  Ъ  |
+// |   Ф  |  Ы  |  В  |  А  |  П  |  Р  |           |  О  |  Л  |  Д  |  Ж  |  Э  |  '  |
+// |   Я  |  Ч  |  С  |  М  |  И  |  Т  |   Б  | Ь  |   Ю |  .  |  ,  |  /  |  \  |     |
+//           |  ;  |  [  |  ]  |   SPACE   |   |   ENTER   |  |  |  |  |     |
+// ----------------------------------------------------------------------------------------------------
+            bindings = <
+&kp CY_TIO   &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                     &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS
+&kp CY_J    &kp CY_C &kp CY_U &kp CY_K &kp CY_E &kp CY_N           &kp CY_G &kp CY_SH &kp CY_SHCH &kp CY_Z &kp CY_H &kp CY_HARD
+&kp CY_F    &kp CY_Y &kp CY_V &kp CY_A &kp CY_P &kp CY_R           &kp CY_O &kp CY_L &kp CY_D &kp CY_ZHE &kp CY_EE &kp SQT
+&kp CY_YA   &kp CY_CH &kp CY_S &kp CY_M &kp CY_I &kp CY_T          &kp CY_B &kp CY_SOFT &kp CY_YU &kp DOT &kp COMMA &kp FSLH &kp BSLH &kp RSHFT
+                     &kp SEMI &kp LBKT &kp RBKT &kp SPACE           &kp RET &kp RGUI
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+
         lower_layer {
 // ------------------------------------------------------------------------------------------------------------
 // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
