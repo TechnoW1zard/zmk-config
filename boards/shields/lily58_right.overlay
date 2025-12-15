@@ -15,10 +15,3 @@
 };
 
 /* RGB подсветка */
-&ws2812 {
-    compatible = "worldsemi,ws2812-bitbang";
-    label = "WS2812";
-    gpios = <&gpio0 30 0>;
-    chain-length = <24>;
-    status = "okay";
-};
