@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: MIT
  */
-
+#include "keys_ru.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -39,16 +39,15 @@
 // |   Я  |  Ч  |  С  |  М  |  И  |  Т  |   Б  | Ь  |   Ю |  .  |  ,  |  /  |  \  |     |
 //           |  ;  |  [  |  ]  |   SPACE   |   |   ENTER   |  |  |  |  |     |
 // ----------------------------------------------------------------------------------------------------
-            bindings = <
-            &unicode 0x0451 &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                     &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS
-            &unicode 0x0439 &unicode 0x0446 &unicode 0x0443 &unicode 0x043A &unicode 0x0435 &unicode 0x043D   &unicode 0x0433 &unicode 0x0448 &unicode 0x0449 &unicode 0x0437 &unicode 0x0445 &unicode 0x044A
-            &unicode 0x0444 &unicode 0x044B &unicode 0x0432 &unicode 0x0430 &unicode 0x043F &unicode 0x0440   &unicode 0x043E &unicode 0x043B &unicode 0x0434 &unicode 0x0436 &unicode 0x044D &kp SQT
-            &unicode 0x044F &unicode 0x0447 &unicode 0x0441 &unicode 0x043C &unicode 0x0438 &unicode 0x0442   &unicode 0x0431 &unicode 0x044C &unicode 0x044E &kp DOT &kp COMMA &kp FSLH &kp BSLH &kp RSHFT
-                        &kp SEMI &kp LBKT &kp RBKT &kp SPACE                    &kp RET &kp RGUI
+           bindings = <
+            &kp RU_CYRILLIC_IO    &kp RU_N1    &kp RU_N2    &kp RU_N3    &kp RU_N4    &kp RU_N5                     &kp RU_N6    &kp RU_N7    &kp RU_N8    &kp RU_N9    &kp RU_N0    &kp RU_MINUS
+            &kp RU_CYRILLIC_SHORT_I &kp RU_CYRILLIC_TSE &kp RU_CYRILLIC_U &kp RU_CYRILLIC_KA &kp RU_CYRILLIC_IE &kp RU_CYRILLIC_EN &kp RU_CYRILLIC_GHE &kp RU_CYRILLIC_SHA &kp RU_CYRILLIC_SHCHA &kp RU_CYRILLIC_ZE &kp RU_CYRILLIC_HA &kp RU_CYRILLIC_HARD_SIGN
+            &kp RU_CYRILLIC_EF    &kp RU_CYRILLIC_YERU &kp RU_CYRILLIC_VE &kp RU_CYRILLIC_A &kp RU_CYRILLIC_PE &kp RU_CYRILLIC_ER &kp RU_CYRILLIC_O  &kp RU_CYRILLIC_EL &kp RU_CYRILLIC_DE &kp RU_CYRILLIC_ZHE &kp RU_CYRILLIC_E &kp SQT
+            &kp RU_CYRILLIC_YA    &kp RU_CYRILLIC_CHE &kp RU_CYRILLIC_ES &kp RU_CYRILLIC_EM &kp RU_CYRILLIC_I  &kp RU_CYRILLIC_TE &kp RU_CYRILLIC_BE &kp RU_CYRILLIC_SOFT_SIGN &kp RU_CYRILLIC_YU &kp RU_DOT &kp RU_COMMA &kp RU_FSLH &kp RU_BSLH &kp RSHFT
+                                &kp RU_SEMI   &kp LBKT   &kp RBKT         &kp RU_SPACE &kp RET &kp RGUI
         >;
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
+    };
 
         lower_layer {
 // ------------------------------------------------------------------------------------------------------------
