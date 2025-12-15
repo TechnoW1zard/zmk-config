@@ -1,0 +1,14 @@
+&i2c1 {
+    status = "okay";
+    sda-pin = <26>;         // замените на ваш реальный SDA-пин, если отличается!
+    scl-pin = <27>;         // замените на ваш реальный SCL-пин, если отличается!
+
+    oled@3c {
+        compatible = "solomon,ssd1306fb";
+        reg = <0x3c>;
+        width = <128>;
+        height = <32>;
+        display-rotation = "180";    // поставьте 0, если дисплей будет "вниз головой"
+        label = "OLED_DISPLAY";
+    };
+};

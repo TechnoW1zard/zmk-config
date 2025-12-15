@@ -1,0 +1,21 @@
+&i2c1 {
+    status = "okay";
+    sda-pin = <26>;    // Укажите номера пинов SDA...
+    scl-pin = <27>;    // ...и SCL, соответствующие вашей плате!
+    clock-frequency = <I2C_BITRATE_FAST>;
+    // Для nRF52840 чаще SDA=26, SCL=27, но ПРОВЕРЬТЕ в своей схеме!!
+    // Если другие — замените здесь!
+    /* example: sda-pin = <20>; scl-pin = <21>; */
+    oled@3c {
+        compatible = "solomon,ssd1306fb";
+        reg = <0x3c>;
+        width = <128>;
+        height = <32>;
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-rotation = "180"; // обычно 180, если верх ногами — уберите или исправьте
+        label = "OLED_DISPLAY";
+        spi-max-frequency = <10000000>;
+        i2c-speed = <400000>;
+    };
+};
