@@ -40,13 +40,13 @@
 //           |  ;  |  [  |  ]  |   SPACE   |   |   ENTER   |  |  |  |  |     |
 // ----------------------------------------------------------------------------------------------------
             bindings = <
-&kp CY_TIO   &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                     &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS
-&kp CY_J    &kp CY_C &kp CY_U &kp CY_K &kp CY_E &kp CY_N           &kp CY_G &kp CY_SH &kp CY_SHCH &kp CY_Z &kp CY_H &kp CY_HARD
-&kp CY_F    &kp CY_Y &kp CY_V &kp CY_A &kp CY_P &kp CY_R           &kp CY_O &kp CY_L &kp CY_D &kp CY_ZHE &kp CY_EE &kp SQT
-&kp CY_YA   &kp CY_CH &kp CY_S &kp CY_M &kp CY_I &kp CY_T          &kp CY_B &kp CY_SOFT &kp CY_YU &kp DOT &kp COMMA &kp FSLH &kp BSLH &kp RSHFT
-                     &kp SEMI &kp LBKT &kp RBKT &kp SPACE           &kp RET &kp RGUI
-            >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            &unicode 0x0451 &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                     &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS
+            &unicode 0x0439 &unicode 0x0446 &unicode 0x0443 &unicode 0x043A &unicode 0x0435 &unicode 0x043D   &unicode 0x0433 &unicode 0x0448 &unicode 0x0449 &unicode 0x0437 &unicode 0x0445 &unicode 0x044A
+            &unicode 0x0444 &unicode 0x044B &unicode 0x0432 &unicode 0x0430 &unicode 0x043F &unicode 0x0440   &unicode 0x043E &unicode 0x043B &unicode 0x0434 &unicode 0x0436 &unicode 0x044D &kp SQT
+            &unicode 0x044F &unicode 0x0447 &unicode 0x0441 &unicode 0x043C &unicode 0x0438 &unicode 0x0442   &unicode 0x0431 &unicode 0x044C &unicode 0x044E &kp DOT &kp COMMA &kp FSLH &kp BSLH &kp RSHFT
+                        &kp SEMI &kp LBKT &kp RBKT &kp SPACE                    &kp RET &kp RGUI
+        >;
+        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
 
