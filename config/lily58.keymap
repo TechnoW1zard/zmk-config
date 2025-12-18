@@ -35,11 +35,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC         &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                &kp N6  &kp N7    &kp N8     &kp N9   &kp N0    &kp GRAVE
-&kp TAB         &kp Q   &kp W   &kp E     &kp R     &kp T                                 &kp Y   &kp U     &kp I      &kp O    &kp P     &kp MINUS
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D     &kp F     &kp G                                 &kp H   &kp J     &kp K      &kp L    &kp SEMI  &kp DOUBLE_QUOTES
-&kp LCTRL       &kp Z   &kp X   &kp C     &kp V     &kp B   &kp C_MUTE    &msc MOVE_Y(5)  &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                                &kp LALT  &kp LGUI  &mo 1   &kp SPACE     &kp RET         &mo 2   &kp BSPC  &kp RGUI
+&kp ESC         &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                     &kp N6  &kp N7    &kp N8     &kp N9   &kp N0    &kp GRAVE
+&kp TAB         &kp Q   &kp W   &kp E     &kp R     &kp T                                      &kp Y   &kp U     &kp I      &kp O    &kp P     &kp MINUS
+&kp LEFT_SHIFT  &kp A   &kp S   &kp D     &kp F     &kp G                                      &kp H   &kp J     &kp K      &kp L    &kp SEMI  &kp DOUBLE_QUOTES
+&kp LCTRL       &kp Z   &kp X   &kp C     &kp V     &kp B   &rgb_ug RGB_TOG    &msc MOVE_Y(0)  &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                                &kp LALT  &kp LGUI  &mo 1   &kp SPACE          &kp RET         &mo 2   &kp BSPC  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -72,13 +72,13 @@
             // |        |         |         |         |         |         | RGB_TOG | |      |      |      |       |      |       |       |
             //                    |         |         |         |         |         | |      |      |      |       |      |
 
-    bindings = <
-&bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &ext_power EP_TOG
-&ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4
-&trans             &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &trans           &trans           &trans           &trans           &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &trans           &trans           &trans
-&trans             &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans
-                      &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans
->;
+            bindings = <
+&bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                       &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &ext_power EP_TOG
+&ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                    &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4
+&trans             &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &trans           &trans           &trans                             &trans           &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &trans           &trans           &trans
+&trans             &trans           &trans           &trans           &trans           &trans           &trans    &trans  &trans           &trans           &trans           &trans           &trans           &trans
+                                                     &trans           &trans           &trans           &trans    &trans  &trans           &trans
+            >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
