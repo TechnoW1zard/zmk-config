@@ -54,11 +54,11 @@
 
         second_layer {
             bindings = <
-&kp ESCAPE      &none   &none   &none   &none   &none                     &none   &none           &none           &none            &none   &none
-&none           &none   &none   &none   &none   &none                     &none   &none           &kp UP_ARROW    &none            &none   &none
-&kp LEFT_SHIFT  &none   &none   &trans  &trans  &trans                    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&kp LCTRL       &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans          &trans          &trans           &trans  &trans
-                                &trans  &trans  &trans  &trans    &trans  &trans  &trans
+&kp ESCAPE      &none   &none   &none   &none   &none                            &none   &none           &none           &none            &none   &none
+&none           &none   &none   &none   &none   &kp PAGE_UP                      &none   &none           &kp UP_ARROW    &none            &none   &none
+&kp LEFT_SHIFT  &none   &none   &trans  &trans  &kp PAGE_DOWN                    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&kp LCTRL       &trans  &trans  &trans  &trans  &trans         &trans    &trans  &trans  &trans          &trans          &trans           &trans  &trans
+                                &trans  &trans  &trans         &trans    &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
