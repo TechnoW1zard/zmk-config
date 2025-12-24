@@ -28,11 +28,11 @@
 
         default_layer {
             bindings = <
-&kp ESC         &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                  &kp N6         &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
-&kp TAB         &kp Q   &kp W   &kp E     &kp R     &kp T                                   &kp Y          &kp U   &kp I      &kp O    &kp P     &kp LEFT_BRACKET
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D     &kp F     &kp G                                   &kp H          &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z   &kp X   &kp C     &kp V     &kp B   &kp GRAVE    &msc (MOVE_X(-5))  &kp N          &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_BRACKET
-                                &kp LALT  &kp LGUI  &mo 1   &kp SPACE    &kp RET            &kp BACKSPACE  &mo 2   &kp RGUI
+&kp ESC         &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                  &kp N6         &kp N7  &kp N8           &kp N9   &kp N0    &kp MINUS
+&kp TAB         &kp Q   &kp W   &kp E     &kp R     &kp T                                   &kp Y          &kp U   &kp I            &kp O    &kp P     &kp LEFT_BRACKET
+&kp LEFT_SHIFT  &kp A   &kp S   &kp D     &kp F     &kp G                                   &kp H          &kp J   &kp K            &kp L    &kp SEMI  &kp SQT
+&kp LCTRL       &kp Z   &kp X   &kp C     &kp V     &kp B   &kp GRAVE    &msc (MOVE_X(-5))  &kp N          &kp M   &kp COMMA        &kp DOT  &kp FSLH  &kp RIGHT_BRACKET
+                                &kp LALT  &kp LGUI  &mo 1   &kp SPACE    &kp RET            &kp BACKSPACE  &mo 2   &kp RIGHT_SHIFT
             >;
 
             sensor-bindings =
@@ -54,11 +54,11 @@
 
         second_layer {
             bindings = <
-&kp ESCAPE      &none   &none   &none   &none   &none                            &none   &none           &none           &none            &none   &none
-&none           &none   &none   &none   &none   &kp PAGE_UP                      &none   &none           &kp UP_ARROW    &none            &none   &none
-&kp LEFT_SHIFT  &none   &none   &trans  &trans  &kp PAGE_DOWN                    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&kp LCTRL       &trans  &trans  &trans  &trans  &trans         &trans    &trans  &trans  &trans          &trans          &trans           &trans  &trans
-                                &trans  &trans  &trans         &trans    &trans  &trans  &trans
+&kp ESCAPE      &none   &kp C_PREV  &kp C_NEXT  &kp C_PLAY_PAUSE  &none                                &none   &none           &none           &none            &none   &kp C_VOLUME_UP
+&none           &none   &none       &none       &none             &kp K_SCROLL_UP                      &none   &none           &kp UP_ARROW    &none            &none   &kp C_VOLUME_DOWN
+&kp LEFT_SHIFT  &none   &none       &trans      &trans            &kp K_SCROLL_DOWN                    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&kp LCTRL       &trans  &trans      &trans      &trans            &trans             &trans    &trans  &trans  &trans          &trans          &trans           &trans  &trans
+                                    &trans      &trans            &trans             &trans    &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
