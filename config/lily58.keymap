@@ -92,11 +92,11 @@
 
         ArchAge_2 {
             bindings = <
-&trans  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp N9  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &kp W         &trans        &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp A         &kp S         &kp D         &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans        &trans        &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &tog 0
-                                    &trans        &trans  &trans  &trans    &trans  &trans  &trans  &trans
+&trans          &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp N9  &kp N0                    &trans         &trans  &trans  &trans  &trans  &trans
+&trans          &trans        &kp W         &trans        &trans  &trans                    &kp PAGE_UP    &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp A         &kp S         &kp D         &trans  &trans                    &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &trans
+&trans          &trans        &trans        &trans        &trans  &trans  &trans    &trans  &trans         &trans  &trans  &trans  &trans  &tog 0
+                                            &trans        &trans  &trans  &trans    &trans  &trans         &trans  &trans
             >;
         };
     };
